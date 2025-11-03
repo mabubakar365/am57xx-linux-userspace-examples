@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -O2
+
+TARGET = led_blink
+SRC = led_blink.c
+
+all:
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+
+clean:
+	rm -f $(TARGET)

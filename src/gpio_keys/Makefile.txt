@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -O2
+
+TARGET = read_gpio_keys
+SRC = read_gpio_keys.c
+
+all:
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+
+clean:
+	rm -f $(TARGET)

@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -O2
+
+TARGET = gpios_leds
+SRC = gpios_leds.c
+
+all:
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+
+clean:
+	rm -f $(TARGET)
