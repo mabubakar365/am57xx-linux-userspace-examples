@@ -49,7 +49,7 @@ gcc -o backlight_control backlight_control.c
 Execute the binary as root (required to access sysfs backlight control):
 
 ```bash
-sudo ./backlight_control
+./backlight_control
 ```
 
 Expected output:
@@ -57,8 +57,9 @@ Expected output:
 ```
 /sys/class/backlight/backlight/max_brightness
 /sys/class/backlight/backlight/brightness
-Current brightness: 32 / 255
-Setting brightness to 255
+Current brightness: 7 / 8
+Setting brightness to 8
+/sys/class/backlight/backlight/brightness
 Brightness updated successfully
 ```
 
@@ -79,7 +80,7 @@ You should see the LCD screen brightness **change immediately**.
 
 * **`fscanf`**: Reads integer brightness values from sysfs files
 * **`fprintf`**: Writes the new brightness value back
-* **Logic**: If current brightness < half of max, set to max; else reduce to ¼
+* **Logic**: Increment brightness and wrap around to 0 if we exceed max
 
 This keeps toggling between high and medium brightness each run.
 
@@ -96,7 +97,7 @@ This keeps toggling between high and medium brightness each run.
 ### 💡 Next Steps
 
 * Implement smooth brightness fading using PWM write loops
-* Expose brightness control via a simple CLI (e.g., `./backlight_control 128`)
+* Expose brightness control via a simple CLI (e.g., `./backlight_control 8`)
 * Integrate with GUI or remote shell scripts for automated display management
 
 ---
