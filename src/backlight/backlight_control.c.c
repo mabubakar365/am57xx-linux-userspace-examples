@@ -41,8 +41,10 @@ int main(void)
 
     printf("Current brightness: %d / %d\n", current_brightness, max_brightness);
 
-    // --- Toggle brightness ---
-    new_brightness = (current_brightness < max_brightness / 2) ? max_brightness : max_brightness / 4;
+    // --- Increment brightness ---
+    new_brightness = current_brightness + 1;
+    if (new_brightness > max_brightness)
+        new_brightness = 0;  // wrap around to 0 if we exceed max
     printf("Setting brightness to %d\n", new_brightness);
 
     // --- Write new brightness ---
