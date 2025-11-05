@@ -46,10 +46,13 @@ gcc -o backlight_control backlight_control.c
 
 ### ▶️ Run Instructions
 
-Execute the binary as root (required to access sysfs backlight control):
+Execute the binary:
 
 ```bash
 ./backlight_control
+./backlight_control poweroff
+./backlight_control poweron
+./backlight_control type
 ```
 
 Expected output:
