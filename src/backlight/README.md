@@ -58,12 +58,21 @@ Execute the binary:
 Expected output:
 
 ```
+./backlight_control
 /sys/class/backlight/backlight/max_brightness
 /sys/class/backlight/backlight/brightness
 Current brightness: 7 / 8
 Setting brightness to 8
 /sys/class/backlight/backlight/brightness
 Brightness updated successfully
+
+./backlight_control type
+Backlight type: raw
+./backlight_control poweroff
+Backlight powered off
+./backlight_control poweron
+Backlight powered on
+
 ```
 
 You should see the LCD screen brightness **change immediately**.
