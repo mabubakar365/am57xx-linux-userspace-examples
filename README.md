@@ -10,7 +10,7 @@ board peripherals directly from Linux user space on the TI AM572x EVM.
 | **leds** | Blink user LEDs using `/sys/class/leds` |
 | **gpio_keys** | Read button events from `/dev/input/eventX` |
 | **gpio_led_interaction** | Toggle LEDs based on key presses |
-| **backlight** | control the LCD backlight from userspace on the TI AM572x EVM (Sitara) board running Linux |
+| **backlight** | control the LCD backlight from userspace on the TI AM572x EVM (Sitara) board running Linux using `/sys/class/backlight` |
 
 ## How to Build
 
