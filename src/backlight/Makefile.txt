@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -O2
+
+TARGET = backlight_control
+SRC = backlight_control.c
+
+all:
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+
+clean:
+	rm -f $(TARGET)
